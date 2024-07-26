@@ -29,6 +29,14 @@ class MainActivityBinding : AppCompatActivity() {
             insets
         }
 
+        //Variables para operaciones
+        var resultado = 0.0
+        var suma = false
+        var resta = false
+        var multiplicacion = false
+        var division = false
+
+
         binding.ceroButton.setOnClickListener {
             binding.resultadoTextView.text = concatenador("0")
         }
@@ -67,32 +75,58 @@ class MainActivityBinding : AppCompatActivity() {
         }
 
         binding.puntoButton.setOnClickListener {
-            binding.resultadoTextView.text = concatenador(".")
+            if(binding.resultadoTextView.text.contains(".")){
+                binding.resultadoTextView.text = concatenador(".")
+            }
         }
         binding.menosButton.setOnClickListener {
+            suma = false
+            resta = true
+            multiplicacion = false
+            division = false
             binding.resultadoTextView.text = concatenador("-")
         }
 
         binding.masButton.setOnClickListener {
+            suma = true
+            resta = false
+            multiplicacion = false
+            division = false
             binding.resultadoTextView.text = concatenador("+")
         }
         binding.divButton.setOnClickListener {
+            suma = false
+            resta = false
+            multiplicacion = false
+            division = true
             binding.resultadoTextView.text = concatenador("/")
+
         }
 
         binding.porButton.setOnClickListener {
+            suma = false
+            resta = false
+            multiplicacion = true
+            division = false
             binding.resultadoTextView.text = concatenador("*")
         }
 
         binding.porcentajeButton.setOnClickListener {
             binding.resultadoTextView.text = concatenador("%")
+            binding.resultadoTextView.text = (binding.resultadoTextView.text.toString().toDouble() * 0.01).toString()
+
         }
 
         binding.allCleanButton.setOnClickListener {
-            binding.resultadoTextView.text = concatenador("AC")
+            suma = false
+            resta = false
+            multiplicacion = false
+            division = false
+            resultado = 0.0
+            binding.resultadoTextView.text = concatenador("0")
         }
         binding.masMenosButton.setOnClickListener {
-            binding.resultadoTextView.text = concatenador("+/-")
+            binding.resultadoTextView.text = (binding.resultadoTextView.text.toString().toDouble() * -1).toString()
         }
     }
 
