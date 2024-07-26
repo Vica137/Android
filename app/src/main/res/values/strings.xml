@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="texto_cero_button">0</string>
+    <string name="texto_igual_button">=</string>
+    <string name="texto_punto_button">.</string>
+    <string name="texto_mas_button">+</string>
+    <string name="texto_menos_button">-</string>
+    <string name="texto_por_button">*</string>
+    <string name="texto_div_button">/</string>
+    <string name="texto_tres_button">3</string>
+    <string name="texto_seis_button">6</string>
+    <string name="texto_nueve_button">9</string>
+    <string name="texto_porcentaje_button">%</string>
+    <string name="texto_uno_button">1</string>
+    <string name="texto_dos_button">2</string>
+    <string name="texto_cuatro_button">4</string>
+    <string name="texto_cinco_button">5</string>
+    <string name="texto_siete_button">7</string>
+    <string name="texto_ocho_button">8</string>
+    <string name="texto_allClean_button">AC</string>
+    <string name="texto_masMenos_button">+/-</string>
+    <string name="texto_resultado_textview">0</string>
+
+
+
+</resources>
